@@ -1,0 +1,58 @@
+{
+    /*
+        Sets the mode in which SublimeLinter runs:
+
+        true - Linting occurs in the background as you type (the default).
+        false - Linting only occurs when you initiate it.
+        "load-save" - Linting occurs only when a file is loaded and saved.
+    */
+    "sublimelinter": true,
+
+    "sublimelinter_mark_style": "outline",
+
+    // If true, lines with errors or warnings will have a gutter mark.
+    "sublimelinter_gutter_marks": true,
+
+    /*
+        The minimum delay in seconds (fractional seconds are okay) before
+        a linter is run when the "sublimelinter" setting is true. This allows
+        you to have background linting active, but defer the actual linting
+        until you are idle. When this value is greater than the built in linting delay,
+        errors are erased when the file is modified, since the assumption is
+        you don't want to see errors while you type.
+    */
+    "sublimelinter_delay": 0,
+
+    // Javascript linter: "gjslint" to use the closure javascript linter (if available),
+    // or either "jshint" or "jslint" to use a built in linter.
+    "javascript_linter": "jshint",
+
+    // jshint: options for linting JavaScript. See http://jshint.com/#docs for more info.
+    // By deault, eval is allowed.
+    "jshint_options":
+    {
+        "boss"          : true,
+        "curly"         : true,
+        "eqeqeq"        : true,
+        "expr"          : true,
+        "forin"         : true,
+        "immed"         : true,
+        "newcap"        : true,
+        "noarg"         : true,
+        "noempty"       : true,
+        "nonew"         : true,
+        "undef"         : true,
+        "trailing"      : true,
+        "unused"        : true,
+        "curly"         : true,
+        "debug"         : true,
+        "quotmark"      : true,
+        "indent": 2
+    },
+
+    // Set to true to highlight annotations
+    "sublimelinter_notes": true,
+
+    // The set of annotation phrases to highlight
+    "annotations": ["TODO", "README", "FIXME"]
+}
